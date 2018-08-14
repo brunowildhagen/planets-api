@@ -1,5 +1,5 @@
 'use strict';
-require("../models/planetModel");
+require("../models/Planet");
 
 const mongoose = require("mongoose");
 
@@ -19,5 +19,3 @@ mongoose.connect(dbURI, config).then(
     console.log("Erro ao conectar com a base de dados: ", err);
   }
 );
-
-// require any models
