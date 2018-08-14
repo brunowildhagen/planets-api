@@ -1,6 +1,6 @@
 const Planet = require("../models/Planet");
 
-exports.listAllTasks = (req, res) => {
+exports.all = (req, res) => {
   Planet.find({}, (err, planet) => {
     if (err) {
       res.status(500).send(err);
@@ -29,7 +29,7 @@ exports.find = (req, body) => {
 };
 
 exports.delete = (req, res) => {
-  Task.remove({ _id: req.params.taskid }, (err, task) => {
+  Task.remove({ _id: req.params.kid }, (err, task) => {
     if (err) {
       return res.status(404).send(err);
     }
