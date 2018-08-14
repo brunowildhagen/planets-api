@@ -1,7 +1,7 @@
 const Planet = require("../models/Planet");
 
 exports.listAllTasks = (req, res) => {
-  Planet.find({}, (err, task) => {
+  Planet.find({}, (err, planet) => {
     if (err) {
       res.status(500).send(err);
     }
